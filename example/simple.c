@@ -41,6 +41,7 @@ int main() {
 
 	/* Loop over all keys of the root object */
 	for (i = 1; i < r; i++) {
+		printf("%d번째\n",i);
 		if (jsoneq(JSON_STRING, &t[i], "user") == 0) {
 			/* We may use strndup() to fetch string value */
 			printf("- User: %.*s\n", t[i+1].end-t[i+1].start,
